@@ -1,0 +1,70 @@
+@import url(./normalize.css);
+@import url(./fonts.css);
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f6;
+}
+
+.sidebar {
+  max-width: 220px;
+  padding: 50px 45px 25px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  background-color: #ffffff;
+}
+
+.sidebar section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar__profile-avatar-wrapper {
+  position: relative;
+}
+.sidebar__profile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.sidebar__profile-avatar-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 18px;
+  width: 16px;
+  height: 16px;
+  background-color: #4caf50;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.sidebar__profile-name {
+  margin-top: 31px;
+}
+.sidebar__profile-profession {
+  margin-top: 15px;
+}
+.sidebar__social {
+}
+.download-btn {
+  width: max-content;
+}

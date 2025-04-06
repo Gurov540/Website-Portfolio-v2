@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <aside class="sidebar">
       <section class="sidebar__profile">
-        <img class="sidebar__avatar" src="./" alt="img" />
-        <h3 class=".sidebar__name">Rayan Adlardard</h3>
-        <h4 class="sidebar__title">Front-end Developer</h4>
+        <div class="sidebar__profile-avatar-wrapper">
+          <img
+            class="sidebar__profile-avatar"
+            src="./assets/img/Profile.jpg"
+            alt="img"
+          />
+        </div>
+
+        <h3 class="sidebar__profile-name">Rayan Adlardard</h3>
+        <h4 class="sidebar__profile-profession">Front-end Developer</h4>
       </section>
       <section class="sidebar__social">
         <ul class="sidebar__social-list">
@@ -64,21 +72,33 @@
               <span class="progress-list__name">Bangla</span>
               <span class="progress-list__value">100%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="100"
+              max="100"
+            ></progress>
           </li>
           <li class="progress-list__item">
             <div class="progress-list_label">
               <span class="progress-list__name">English</span>
               <span class="progress-list__value">80%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="80"
+              max="100"
+            ></progress>
           </li>
           <li class="progress-list__item">
             <div class="progress-list_label">
               <span class="progress-list__name">Spanish</span>
               <span class="progress-list__value">60%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="60"
+              max="100"
+            ></progress>
           </li>
         </ul>
       </section>
@@ -91,37 +111,56 @@
               <span class="progress-list__name">HTML</span>
               <span class="progress-list__value">90%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="90"
+              max="100"
+            ></progress>
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
               <span class="progress-list__name">CSS</span>
               <span class="progress-list__value">85%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="85"
+              max="100"
+            ></progress>
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
               <span class="progress-list__name">JS</span>
               <span class="progress-list__value">75%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="75"
+              max="100"
+            ></progress>
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
               <span class="progress-list__name">PHP</span>
               <span class="progress-list__value">75%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="75"
+              max="100"
+            ></progress>
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
               <span class="progress-list__name">WordPress</span>
               <span class="progress-list__value">85%</span>
             </div>
-            <progress class="progress-list__bar"></progress>
+            <progress
+              class="progress-list__bar"
+              value="85"
+              max="100"
+            ></progress>
           </li>
-          <progress class="progress-list__progress"></progress>
         </ul>
       </section>
       <section class="sidebar__section">
