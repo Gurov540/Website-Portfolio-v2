@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "portfolio-icom";
+  src: url("./../assets/icon-fonts/portfolio-icom.eot?lanxw3");
+  src: url("./../assets/icon-fonts/portfolio-icom.eot?lanxw3#iefix")
+      format("embedded-opentype"),
+    url("./../assets/icon-fonts/portfolio-icom.ttf?lanxw3") format("truetype"),
+    url("./../assets/icon-fonts/portfolio-icom.woff?lanxw3") format("woff"),
+    url("./../assets/icon-fonts/portfolio-icom.svg?lanxw3#portfolio-icom")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "portfolio-icom" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-contacts:before {
+  content: "\e900";
+}
+.icon-darckthem:before {
+  content: "\e901";
+}
+.icon-download:before {
+  content: "\e902";
+}
+.icon-education:before {
+  content: "\e903";
+}
+.icon-expiriens:before {
+  content: "\e904";
+}
+.icon-facebook:before {
+  content: "\e905";
+}
+.icon-footerc:before {
+  content: "\e906";
+}
+.icon-home:before {
+  content: "\e907";
+}
+.icon-instagram:before {
+  content: "\e908";
+}
+.icon-linkedin:before {
+  content: "\e909";
+}
+.icon-mail:before {
+  content: "\e90a";
+}
+.icon-map:before {
+  content: "\e90b";
+}
+.icon-no:before {
+  content: "\e90c";
+}
+.icon-phone:before {
+  content: "\e90d";
+}
+.icon-portfolio:before {
+  content: "\e90e";
+}
+.icon-services:before {
+  content: "\e90f";
+}
+.icon-star:before {
+  content: "\e911";
+}
+.icon-tweeter:before {
+  content: "\e912";
+}
+.icon-vector:before {
+  content: "\e913";
+}
+.icon-yes:before {
+  content: "\e914";
+}
+.icon-youtube:before {
+  content: "\e915";
+}

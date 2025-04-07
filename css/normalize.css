@@ -41,7 +41,14 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 /* Grouping content
    ========================================================================== */
 
@@ -75,6 +82,8 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: #000000;
 }
 
 /**
@@ -348,4 +357,9 @@ template {
 
 [hidden] {
   display: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
