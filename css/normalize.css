@@ -19,7 +19,9 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
 }

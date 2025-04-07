@@ -12,15 +12,19 @@
   --color-text: #767676;
   --color-heading: #2b2b2b;
 
-  --font-family-main: "Poppins", sans-serif;
+  --font-family-main: "Inter", sans-serif;
 
   --font-size-base: 15px;
   --font-size-sm: 14px;
-  --font-size-lg: 20px;
+  --font-size-lg: 18px;
   --font-size-xl: 32px;
 
+  --line-height-text: 24px;
+  --line-height-heading: 123.6%;
+
   --font-weight-normal: normal;
-  --font-weight-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-bold: bold;
 
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -35,7 +39,7 @@ body {
 }
 
 .sidebar {
-  max-width: 220px;
+  max-width: 305px;
   padding: 50px 45px 25px 40px;
   display: flex;
   flex-direction: column;
@@ -74,14 +78,19 @@ body {
 }
 .sidebar__profile-name {
   margin-top: 31px;
+  color: var(--color-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
 }
 .sidebar__profile-profession {
   margin-top: 15px;
+  color: var(--color-text);
 }
 
 hr {
   border: 0.75px solid #f0f0f6;
   width: 100%;
+  margin: 25px 0 25px 0;
 }
 
 .sidebar__social-list {
@@ -104,6 +113,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: var(--color-heading);
 }
 .sidebar__info-list {
   width: 100%;
@@ -114,12 +124,63 @@ hr {
 .sidebar__info-item {
   display: flex;
   justify-content: space-between;
-  line-height: 24px;
+  line-height: var(--line-height-text);
 }
 .sidebar__info-label {
   background-color: var(--color-primary);
 }
-
+.sidebar__section {
+}
+.sidebar__section-title {
+  color: var(--color-heading);
+  line-height: var(--line-height-heading);
+  width: 100%;
+}
+.progress-list {
+  width: 100%;
+}
+.progress-list__label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: var(--line-height-text);
+}
+.progress-list__bar {
+  width: 100%;
+  border: 2px solid var(--color-primary);
+  height: 8px;
+  padding: 1px;
+  border-radius: 15px; /* Скругленные углы */
+  overflow: hidden; /* Чтобы внутренние элементы тоже были скруглены */
+}
+.progress-list__bar::-webkit-progress-bar {
+  background-color: var(--color-bg-secondary);
+  border-radius: 15px;
+}
+.progress-list__bar::-webkit-progress-value {
+  background-color: var(--color-primary);
+  border-radius: 15px;
+}
+.extraskills-list {
+  width: 100%;
+}
+.extraskills-list__item {
+  color: var(--color-text);
+  line-height: var(--line-height-text);
+  margin-left: 15px;
+  padding-left: 15px;
+}
+.extraskills-list__item::marker {
+  content: url(./../assets/icons/Icons.svg);
+}
 .download-btn {
-  width: max-content;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  padding: 10px 0;
+}
+.download-btn__icon {
+  margin-left: 19px;
 }
