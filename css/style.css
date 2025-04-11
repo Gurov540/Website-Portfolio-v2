@@ -155,8 +155,8 @@ hr {
   border: 2px solid var(--color-primary);
   height: 8px;
   padding: 1px;
-  border-radius: 15px; /* Скругленные углы */
-  overflow: hidden; /* Чтобы внутренние элементы тоже были скруглены */
+  border-radius: 15px;
+  overflow: hidden;
 }
 .progress-list__bar::-webkit-progress-bar {
   background-color: var(--color-bg-secondary);
