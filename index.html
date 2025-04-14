@@ -3,47 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Rayan Adlardard's Front-end Developer Portfolio showcasing skills, languages, experience and projects."
+    />
+    <meta
+      name="keywords"
+      content="Front-end Developer, Portfolio, HTML, CSS, JavaScript, Web Developer, Rayan Adlardard"
+    />
+    <meta name="author" content="Rayan Adlardard" />
+
+    <title>Rayan Adlardard | Front-end Developer Portfolio</title>
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <aside class="sidebar">
-      <section class="sidebar__profile">
+    <aside class="sidebar" aria-label="Sidebar">
+      <section class="sidebar__profile" aria-labelledby="profile-title">
         <div class="sidebar__profile-avatar-wrapper">
           <img
             class="sidebar__profile-avatar"
             src="./assets/img/Profile.jpg"
-            alt="img"
+            alt="Portrait of Rayan Adlardard"
           />
         </div>
-
-        <h3 class="sidebar__profile-name">Rayan Adlardard</h3>
+        <h3 id="profile-title" class="sidebar__profile-name">
+          Rayan Adlardard
+        </h3>
         <h4 class="sidebar__profile-profession">Front-end Developer</h4>
       </section>
-      <section class="sidebar__social">
+
+      <section class="sidebar__social" aria-label="Social Media Links">
         <ul class="sidebar__social-list">
           <li class="sidebar__social-item">
-            <a href="" class="sidebar__social-link icon-facebook"></a>
+            <a
+              href="#"
+              class="sidebar__social-link icon-facebook"
+              aria-label="Facebook"
+            ></a>
           </li>
           <li class="sidebar__social-item">
-            <a href="" class="sidebar__social-link icon-instagram"></a>
+            <a
+              href="#"
+              class="sidebar__social-link icon-instagram"
+              aria-label="Instagram"
+            ></a>
           </li>
           <li class="sidebar__social-item">
-            <a href="" class="sidebar__social-link icon-tweeter"></a>
+            <a
+              href="#"
+              class="sidebar__social-link icon-tweeter"
+              aria-label="Twitter"
+            ></a>
           </li>
           <li class="sidebar__social-item">
-            <a href="" class="sidebar__social-link icon-linkedin"></a>
+            <a
+              href="#"
+              class="sidebar__social-link icon-linkedin"
+              aria-label="LinkedIn"
+            ></a>
           </li>
           <li class="sidebar__social-item">
-            <a href="" class="sidebar__social-link icon-youtube"></a>
+            <a
+              href="#"
+              class="sidebar__social-link icon-youtube"
+              aria-label="YouTube"
+            ></a>
           </li>
           <li class="sidebar__social-item">
-            <a href="" class="sidebar__social-link icon-vector"></a>
+            <a
+              href="#"
+              class="sidebar__social-link icon-vector"
+              aria-label="Other Social Link"
+            ></a>
           </li>
         </ul>
       </section>
+
       <hr />
-      <section class="sidebar__info">
+
+      <section class="sidebar__info" aria-label="Personal Info">
         <ul class="sidebar__info-list">
           <li class="sidebar__info-item">
             <span class="sidebar__info-label">Age:</span>
@@ -59,13 +99,15 @@
           </li>
           <li class="sidebar__info-item">
             <span class="sidebar__info-label">Address:</span>
-            <span class="sidebar__info-value">Dhaka,Bangladesh</span>
+            <span class="sidebar__info-value">Dhaka, Bangladesh</span>
           </li>
         </ul>
       </section>
+
       <hr />
-      <section class="sidebar__section">
-        <h3 class="sidebar__section-title">Languages</h3>
+
+      <section class="sidebar__section" aria-labelledby="lang-title">
+        <h3 id="lang-title" class="sidebar__section-title">Languages</h3>
         <ul class="progress-list">
           <li class="progress-list__item">
             <div class="progress-list__label">
@@ -102,14 +144,16 @@
           </li>
         </ul>
       </section>
+
       <hr />
-      <section class="sidebar__section">
-        <h3 class="sidebar__section-title">Skills</h3>
+
+      <section class="sidebar__section" aria-labelledby="skills-title">
+        <h3 id="skills-title" class="sidebar__section-title">Skills</h3>
         <ul class="progress-list">
           <li class="progress-list__item">
             <div class="progress-list__label">
-              <span class="progress-list__name">HTML</span>
-              <span class="progress-list__value">90%</span>
+              <span class="progress-list__name">HTML</span
+              ><span class="progress-list__value">90%</span>
             </div>
             <progress
               class="progress-list__bar"
@@ -119,8 +163,8 @@
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
-              <span class="progress-list__name">CSS</span>
-              <span class="progress-list__value">85%</span>
+              <span class="progress-list__name">CSS</span
+              ><span class="progress-list__value">85%</span>
             </div>
             <progress
               class="progress-list__bar"
@@ -130,8 +174,8 @@
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
-              <span class="progress-list__name">JS</span>
-              <span class="progress-list__value">75%</span>
+              <span class="progress-list__name">JS</span
+              ><span class="progress-list__value">75%</span>
             </div>
             <progress
               class="progress-list__bar"
@@ -141,8 +185,8 @@
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
-              <span class="progress-list__name">PHP</span>
-              <span class="progress-list__value">75%</span>
+              <span class="progress-list__name">PHP</span
+              ><span class="progress-list__value">75%</span>
             </div>
             <progress
               class="progress-list__bar"
@@ -152,8 +196,8 @@
           </li>
           <li class="progress-list__item">
             <div class="progress-list__label">
-              <span class="progress-list__name">WordPress</span>
-              <span class="progress-list__value">85%</span>
+              <span class="progress-list__name">WordPress</span
+              ><span class="progress-list__value">85%</span>
             </div>
             <progress
               class="progress-list__bar"
@@ -163,9 +207,11 @@
           </li>
         </ul>
       </section>
+
       <hr />
-      <section class="sidebar__section">
-        <h3 class="sidebar__section-title">Extra Skills</h3>
+
+      <section class="sidebar__section" aria-labelledby="extra-title">
+        <h3 id="extra-title" class="sidebar__section-title">Extra Skills</h3>
         <ul class="extraskills-list">
           <li class="extraskills-list__item">Bootstrap, Materialize</li>
           <li class="extraskills-list__item">Stylus, Sass, Less</li>
@@ -173,62 +219,69 @@
           <li class="extraskills-list__item">GIT Knowledge</li>
         </ul>
       </section>
+
       <hr />
-      <a href="#" class="download-btn" download
-        >DOWNLOAD CV <i class="download-btn__icon icon-download"></i
+
+      <a href="#" class="download-btn" download aria-label="Download CV"
+        >Download CV
+        <i class="download-btn__icon icon-download" aria-hidden="true"></i
       ></a>
     </aside>
 
-    <main></main>
+    <main aria-label="Main content area"></main>
 
-    <nav class="nav-menu">
-      <button class="nav-menu__theme-toggle" aria-label="Toggle Theme">
-        <i class="icon-darckthem"></i>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <button class="nav-menu__theme-toggle" aria-label="Toggle theme">
+        <i class="icon-darckthem" aria-hidden="true"></i>
       </button>
       <ul class="nav-menu__list">
         <li class="nav-menu__item">
           <a
-            href=""
-            data-tooltip="Home"
+            href="#"
             class="nav-menu__link icon-home nav-menu__link--active"
-          >
-          </a>
+            aria-label="Home"
+            title="Home"
+          ></a>
         </li>
         <li class="nav-menu__item">
           <a
-            href=""
-            data-tooltip="Services"
+            href="#"
             class="nav-menu__link icon-services"
-          >
-          </a>
+            aria-label="Services"
+            title="Services"
+          ></a>
         </li>
         <li class="nav-menu__item">
           <a
-            href=""
-            data-tooltip="Education"
+            href="#"
             class="nav-menu__link icon-education"
-          >
-          </a>
+            aria-label="Education"
+            title="Education"
+          ></a>
         </li>
         <li class="nav-menu__item">
           <a
-            href=""
-            data-tooltip="Work Experience"
+            href="#"
             class="nav-menu__link icon-expiriens"
-          >
-          </a>
+            aria-label="Work Experience"
+            title="Work Experience"
+          ></a>
         </li>
         <li class="nav-menu__item">
           <a
-            href=""
-            data-tooltip="Portfolio"
+            href="#"
             class="nav-menu__link icon-portfolio"
-          >
-          </a>
+            aria-label="Portfolio"
+            title="Portfolio"
+          ></a>
         </li>
         <li class="nav-menu__item">
-          <a href="" data-tooltip="Blog" class="nav-menu__link icon-contacts">
-          </a>
+          <a
+            href="#"
+            class="nav-menu__link icon-contacts"
+            aria-label="Blog"
+            title="Blog"
+          ></a>
         </li>
       </ul>
     </nav>
