@@ -1,4 +1,4 @@
-@import url(./normalize.css);
+@import url(./reset.css);
 @import url(./fonts.css);
 @import url(./iconsfont.css);
 
@@ -134,6 +134,7 @@ hr {
   padding: 0 5px;
 }
 .sidebar__section {
+  content: "";
 }
 .sidebar__section-title {
   color: var(--color-heading);
@@ -192,70 +193,44 @@ hr {
 main {
   width: 100%;
 }
-/* Right sidebar */
-
-.sidebar-nav {
+/* Navigation menu */
+.nav-menu {
   position: fixed;
   right: 0;
-  min-width: 108px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 52px 22px;
+  height: 100vh;
+  width: 108px;
   background-color: var(--color-bg-secondary);
-  font-size: 25px;
+  text-align: center;
+  padding: 52px 22px;
 }
-
-.sidebar-nav__theme-toggle {
+.nav-menu__theme-toggle {
+  font-size: 25px;
   background-color: #fff;
   border: none;
-  margin-bottom: auto;
-  cursor: pointer;
-}
-
-.sidebar-nav__nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.sidebar-nav__list {
-  margin: 0;
   padding: 0;
+  width: max-content;
+}
+.nav-menu__list {
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
-  gap: 43px;
-  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
 }
-.sidebar-nav__item {
+.nav-menu__item {
+  background-color: var(--color-bg-nonactive);
   width: 40px;
   height: 40px;
-  text-align: center;
-  background-color: var(--color-bg-nonactive);
   border-radius: 50%;
+  align-content: center;
 }
-.sidebar-nav__item:has(.sidebar_nav__link--active) {
-  background-color: var(--color-primary);
-}
-.sidebar_nav__link {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text);
-}
-.sidebar_nav__link::before {
-  line-height: 1;
-  display: block;
-  text-align: center;
-}
-.sidebar_nav__link--active {
-  color: var(--color-heading);
-}
-.sidebar-nav__tooltip {
-  display: none;
+.nav-menu__link {
+  box-sizing: border-box;
 }
