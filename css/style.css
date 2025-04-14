@@ -99,6 +99,7 @@ hr {
 
 .sidebar__social-list {
   width: 100%;
+  margin-top: 15px;
   font-size: 11.89px;
   display: flex;
   justify-content: space-between;
@@ -138,9 +139,12 @@ hr {
   content: "";
 }
 .sidebar__section-title {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
   color: var(--color-heading);
   line-height: var(--line-height-heading);
-  width: 100%;
 }
 .progress-list {
   width: 100%;
@@ -190,10 +194,7 @@ hr {
 .download-btn__icon {
   margin-left: 19px;
 }
-/* main */
-main {
-  width: 100%;
-}
+
 /* Navigation menu */
 .nav-menu {
   position: fixed;
@@ -206,6 +207,7 @@ main {
   background-color: var(--color-bg-secondary);
   text-align: center;
   padding: 52px 22px;
+  gap: 50px;
 }
 .nav-menu__theme-toggle {
   font-size: 25px;
@@ -243,4 +245,9 @@ main {
   &.nav-menu__link--active::before {
     color: var(--color-heading);
   }
+}
+
+/* main */
+main {
+  width: 100%;
 }
