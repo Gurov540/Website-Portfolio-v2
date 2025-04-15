@@ -28,6 +28,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-hireme_hover:before {
+  content: "\e916";
+}
+.icon-hireme:before {
+  content: "\e910";
+}
 .icon-contacts:before {
   content: "\e900";
 }
