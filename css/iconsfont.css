@@ -28,6 +28,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Ad-pop-up:before {
+  content: "\e917";
+}
+.icon-coding:before {
+  content: "\e918";
+}
+.icon-game-development:before {
+  content: "\e919";
+}
+.icon-illustration:before {
+  content: "\e91a";
+}
+.icon-microphone:before {
+  content: "\e91b";
+}
+.icon-photographer:before {
+  content: "\e91c";
+}
 .icon-hireme_hover:before {
   content: "\e916";
 }
@@ -88,7 +106,7 @@
 .icon-tweeter:before {
   content: "\e912";
 }
-.icon-vector:before {
+.icon-Vector:before {
   content: "\e913";
 }
 .icon-yes:before {
