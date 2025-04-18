@@ -316,10 +316,6 @@ main {
 .section {
   padding-block: 70px;
 }
-
-.services {
-}
-
 .section__title {
   text-align: center;
   font-size: 36px;
@@ -327,7 +323,6 @@ main {
   color: var(--color-heading);
   margin-bottom: 16px;
 }
-
 .section__subtitle {
   text-align: center;
   color: var(--color-text);
@@ -335,14 +330,12 @@ main {
   line-height: 1.6;
   margin-bottom: 64px;
 }
-
 .services__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 20px;
   box-sizing: border-box;
 }
-
 .service-card {
   display: flex;
   flex-direction: column;
@@ -351,26 +344,22 @@ main {
   padding: 25px 0 33px 0;
   transition: all 0.3s ease;
 }
-
 .service-card__icon {
   font-size: 74px;
   color: var(--color-primary);
   margin-bottom: 16px;
   display: inline-block;
 }
-
 .service-card__title {
   font-size: 20px;
   font-weight: 600;
   color: var(--color-heading);
   margin-bottom: 8px;
 }
-
 .service-card__desc {
   font-size: 14px;
   color: var(--color-text);
 }
-
 .service-card__link {
   display: inline-block;
   margin-top: 16px;
@@ -382,6 +371,7 @@ main {
 }
 
 /* services section */
+
 .pricing {
   padding-block: 70px;
 }
