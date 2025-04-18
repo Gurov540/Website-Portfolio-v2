@@ -88,7 +88,7 @@
 .icon-map:before {
   content: "\e90b";
 }
-.icon-no:before {
+.icon-uncheked:before {
   content: "\e90c";
 }
 .icon-phone:before {
@@ -106,10 +106,10 @@
 .icon-tweeter:before {
   content: "\e912";
 }
-.icon-Vector:before {
+.icon-vector:before {
   content: "\e913";
 }
-.icon-yes:before {
+.icon-cheked:before {
   content: "\e914";
 }
 .icon-youtube:before {
