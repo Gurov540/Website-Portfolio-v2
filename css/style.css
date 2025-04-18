@@ -21,7 +21,7 @@
   --font-size-xl: 32px;
 
   --sidebar-width: 305px;
-  --nav-width: 108px;
+  --nav-width: 105px;
 
   --gap: 30px;
 
@@ -314,22 +314,25 @@ main {
 }
 
 /* services section */
+.section {
+  margin-top: 70px;
+}
 
 .services {
-  padding-block: 80px;
+  padding-block: 70px;
 }
 
 .section__title {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: var(--color-heading);
   margin-bottom: 16px;
 }
 
 .section__subtitle {
   text-align: center;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 64px;
@@ -337,14 +340,15 @@ main {
 
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .service-card {
   background-color: var(--color-bg-secondary);
-  padding: 32px 24px;
   text-align: center;
+  padding: 25px 0 33px 0;
   transition: all 0.3s ease;
 }
 
@@ -376,3 +380,5 @@ main {
   font-size: 13px;
   text-decoration: none;
 }
+
+/* services section */
