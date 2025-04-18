@@ -269,8 +269,7 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap-reverse;
-}
-.intro__content {
+  margin-bottom: 70px;
 }
 .intro__title {
   font-size: 48px;
@@ -315,11 +314,10 @@ main {
 
 /* services section */
 .section {
-  margin-top: 70px;
+  padding-block: 70px;
 }
 
 .services {
-  padding-block: 70px;
 }
 
 .section__title {
@@ -346,6 +344,8 @@ main {
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-bg-secondary);
   text-align: center;
   padding: 25px 0 33px 0;
@@ -382,3 +382,76 @@ main {
 }
 
 /* services section */
+.pricing {
+  padding-block: 70px;
+}
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(308px, 1fr));
+  gap: 21px;
+}
+.pricing-card {
+  background-color: var(--color-bg-secondary);
+  padding: 54px 32px 25px 32px;
+  text-align: center;
+  position: relative;
+  color: var(--color-heading);
+}
+.pricing-card__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3px 0;
+  background-color: var(--color-primary);
+  font-size: 15px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-heading);
+}
+.pricing-card__title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 19px;
+}
+.pricing-card__price {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 8px;
+  & span {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+  }
+}
+.pricing-card__desc {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  margin-bottom: 21px;
+}
+.pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: var(--color-text);
+  gap: 16px;
+  margin-bottom: 21px;
+  & .icon-cheked {
+    color: var(--color-heading);
+    &::before {
+      color: var(--color-primary);
+    }
+  }
+  & li::before {
+    margin-right: 14px;
+  }
+}
+.pricing-card__button {
+  display: inline-block;
+  align-content: center;
+  width: 169px;
+  height: 38px;
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  border-radius: 30px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+}
