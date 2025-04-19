@@ -64,13 +64,13 @@
 .icon-education:before {
   content: "\e903";
 }
-.icon-expiriens:before {
+.icon-experience:before {
   content: "\e904";
 }
 .icon-facebook:before {
   content: "\e905";
 }
-.icon-footerc:before {
+.icon-footer:before {
   content: "\e906";
 }
 .icon-home:before {
@@ -88,7 +88,7 @@
 .icon-map:before {
   content: "\e90b";
 }
-.icon-uncheked:before {
+.icon-unchecked:before {
   content: "\e90c";
 }
 .icon-phone:before {
@@ -109,7 +109,7 @@
 .icon-vector:before {
   content: "\e913";
 }
-.icon-cheked:before {
+.icon-checked:before {
   content: "\e914";
 }
 .icon-youtube:before {
