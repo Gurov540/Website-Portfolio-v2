@@ -248,6 +248,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
   &::before {
     color: var(--color-text);
   }
