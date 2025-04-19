@@ -425,7 +425,7 @@ main {
   color: var(--color-text);
   gap: 16px;
   margin-bottom: 21px;
-  & .icon-cheked {
+  & .icon-checked {
     color: var(--color-heading);
     &::before {
       color: var(--color-primary);
