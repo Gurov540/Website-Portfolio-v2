@@ -379,7 +379,7 @@ main {
 .pricing__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(308px, 1fr));
-  gap: 21px;
+  gap: 20px;
 }
 .pricing-card {
   background-color: var(--color-bg-secondary);
@@ -452,7 +452,7 @@ main {
 .recom__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 27px;
+  gap: 20px;
 }
 .testimonial-card {
   background-color: var(--color-bg-secondary);
