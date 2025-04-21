@@ -493,3 +493,57 @@ main {
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
 }
+
+/* Education section */
+
+.timeline__grid {
+  padding: 47px 29px 37px 37px;
+  background-color: var(--color-bg-secondary);
+}
+.timeline-card {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.timeline-card__left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.timeline-card__title {
+  text-wrap: nowrap;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  width: max-content;
+  color: var(--color-heading);
+}
+.timeline-card__role {
+  display: flex;
+  gap: 21px;
+  font-size: 15px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-heading);
+}
+.timeline-card__date {
+  font-size: 10px;
+  font-weight: var(--font-weight-normal);
+  background-color: var(--color-primary);
+  align-content: center;
+  padding: 4px 7px;
+  color: #fff;
+  text-wrap: nowrap;
+}
+.timeline-card__right {
+  max-width: 536px;
+}
+.timeline-card__subtitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 28px;
+  color: var(--color-heading);
+}
+.timeline-card__description {
+  font-size: 15px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text);
+}
