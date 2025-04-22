@@ -635,3 +635,42 @@ main {
   font-weight: var(--font-weight-medium);
   color: var(--color-primary);
 }
+
+/* contact section */
+.contact {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.contact__container {
+  width: 570px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  background-color: var(--color-bg-secondary);
+  & label {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    & input,
+    textarea {
+      width: 100%;
+      font-size: 40px;
+      background-color: var(--color-bg-nonactive);
+    }
+  }
+}
+input.submit-btn {
+  width: max-content;
+  padding: 9px 25px;
+  background-color: var(--color-primary);
+  color: var(--color-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
