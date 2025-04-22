@@ -316,6 +316,9 @@ main {
 /* services section */
 .section {
   padding-block: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .section__title {
   text-align: center;
@@ -564,9 +567,10 @@ main {
 }
 .grid__portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 310px);
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 20px;
 }
+
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -594,4 +598,40 @@ main {
   font-size: 40px;
   color: #fff;
   font-weight: bold;
+}
+
+/* blog section*/
+
+.grid__blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 20px;
+}
+.blog-container {
+  background-color: var(--color-bg-secondary);
+  position: relative;
+}
+.blog-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+.blog-content {
+  padding: 25px 17px 17px 25px;
+}
+.blog-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-heading);
+}
+.blog-text {
+  font-size: 15px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text);
+  margin: 8px 0;
+}
+.blog-link {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
 }
