@@ -321,6 +321,7 @@ main {
   justify-content: center;
 }
 .section__title {
+  text-wrap: nowrap;
   text-align: center;
   font-size: 36px;
   font-weight: 700;
@@ -640,12 +641,17 @@ main {
 .contact {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .contact__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   width: 570px;
 }
 .contact-form {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -673,4 +679,43 @@ input.submit-btn {
   color: var(--color-heading);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
+}
+.contact-info__container {
+  flex: 1;
+  max-width: 370px;
+}
+.grid__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  padding: 25px 25px 15px 25px;
+}
+.info-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  font-size: var(--font-size-lg);
+  color: var(--color-heading);
+}
+.info-content {
+  margin-top: 30px;
+  width: 100%;
+  color: var(--color-text);
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
 }
