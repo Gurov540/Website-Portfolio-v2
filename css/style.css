@@ -260,6 +260,7 @@ hr {
 /* main */
 main {
   max-width: 100%;
+  width: 970px;
   margin-left: var(--gap);
   margin-right: calc(var(--nav-width) + var(--gap));
 }
