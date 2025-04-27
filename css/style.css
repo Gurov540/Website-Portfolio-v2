@@ -281,8 +281,11 @@ hr {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
-.nav-menu__item:hover::after {
-  opacity: 1;
+.nav-menu__item:hover {
+  background-color: var(--color-primary);
+  & .nav-menu__link::before {
+    color: var(--color-heading);
+  }
 }
 .nav-menu__link {
   display: flex;
