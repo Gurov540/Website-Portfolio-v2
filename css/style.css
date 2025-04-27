@@ -202,6 +202,7 @@ hr {
 
 /* Navigation menu */
 .nav-menu {
+  z-index: 1;
   position: fixed;
   right: 0;
   height: 100vh;
@@ -259,8 +260,7 @@ hr {
 
 /* main */
 main {
-  max-width: 100%;
-  width: 970px;
+  width: 100%;
   margin-left: var(--gap);
   margin-right: calc(var(--nav-width) + var(--gap));
 }
@@ -363,12 +363,13 @@ main {
   margin-bottom: 8px;
 }
 .service-card__desc {
+  margin-top: auto;
   font-size: 14px;
   color: var(--color-text);
 }
 .service-card__link {
   display: inline-block;
-  margin-top: 16px;
+  margin-top: auto;
   font-weight: 600;
   color: var(--color-primary);
   text-transform: uppercase;
@@ -392,6 +393,13 @@ main {
   text-align: center;
   position: relative;
   color: var(--color-heading);
+}
+.pricing-card:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  & .pricing-card__button {
+    background-color: var(--color-primary);
+    box-shadow: none;
+  }
 }
 .pricing-card__mark {
   position: absolute;
