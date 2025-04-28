@@ -28,6 +28,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-plus:before {
+  content: "\e91d";
+}
 .icon-Ad-pop-up:before {
   content: "\e917";
 }
@@ -40,10 +43,10 @@
 .icon-illustration:before {
   content: "\e91a";
 }
-.icon-microphone:before {
+.icon-Microphone:before {
   content: "\e91b";
 }
-.icon-photographer:before {
+.icon-Photographer:before {
   content: "\e91c";
 }
 .icon-hireme_hover:before {
@@ -64,13 +67,13 @@
 .icon-education:before {
   content: "\e903";
 }
-.icon-experience:before {
+.icon-expiriens:before {
   content: "\e904";
 }
 .icon-facebook:before {
   content: "\e905";
 }
-.icon-footer:before {
+.icon-footerc:before {
   content: "\e906";
 }
 .icon-home:before {
@@ -88,7 +91,7 @@
 .icon-map:before {
   content: "\e90b";
 }
-.icon-unchecked:before {
+.icon-uncheked:before {
   content: "\e90c";
 }
 .icon-phone:before {
@@ -106,10 +109,10 @@
 .icon-tweeter:before {
   content: "\e912";
 }
-.icon-vector:before {
+.icon-Vector:before {
   content: "\e913";
 }
-.icon-checked:before {
+.icon-cheked:before {
   content: "\e914";
 }
 .icon-youtube:before {

@@ -256,7 +256,7 @@ hr {
   padding: 6px 15px 3px;
   text-decoration: none;
   text-wrap: nowrap;
-  font-size: 15px;
+  font-size: var(--font-size-base);
   transform: translateX(-50%) translateY(10px);
   opacity: 0;
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;
@@ -450,7 +450,7 @@ main {
   width: 100%;
   padding: 3px 0;
   background-color: var(--color-primary);
-  font-size: 15px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-heading);
 }
@@ -525,7 +525,7 @@ main {
   margin-bottom: 18px;
 }
 .testimonial-card__text {
-  font-size: 15px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
   margin-bottom: 30px;
@@ -544,7 +544,7 @@ main {
   margin-bottom: 5px;
 }
 .testimonial-card__role {
-  font-size: 15px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
 }
@@ -575,7 +575,7 @@ main {
 .timeline-card__role {
   display: flex;
   gap: 21px;
-  font-size: 15px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-heading);
 }
@@ -598,7 +598,7 @@ main {
   color: var(--color-heading);
 }
 .timeline-card__description {
-  font-size: 15px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
 }
@@ -628,28 +628,37 @@ main {
   overflow: hidden;
 }
 .portfolio-item img {
+  cursor: pointer;
   width: 100%;
   height: auto;
   display: block;
 }
-.portfolio-item.active::before {
+.portfolio-item::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(255, 170, 0, 0.85);
   z-index: 1;
   transition: opacity 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
 }
-.portfolio-item.active::after {
-  content: "+";
+.portfolio-item::after {
+  content: url(./../assets/icons/plus.svg);
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%);
-  font-size: 40px;
-  color: #fff;
+  font-size: 80px;
+  color: var(--color-heading);
   font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+}
+.portfolio-item:hover::before,
+.portfolio-item:hover::after {
+  opacity: 1;
 }
 
 /* blog section*/
@@ -677,7 +686,7 @@ main {
   color: var(--color-heading);
 }
 .blog-text {
-  font-size: 15px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
   margin: 8px 0;
