@@ -31,7 +31,7 @@
 .icon-plus:before {
   content: "\e91d";
 }
-.icon-Ad-pop-up:before {
+.icon-ad-pop-up:before {
   content: "\e917";
 }
 .icon-coding:before {
@@ -43,10 +43,10 @@
 .icon-illustration:before {
   content: "\e91a";
 }
-.icon-Microphone:before {
+.icon-microphone:before {
   content: "\e91b";
 }
-.icon-Photographer:before {
+.icon-photographer:before {
   content: "\e91c";
 }
 .icon-hireme_hover:before {
@@ -67,13 +67,13 @@
 .icon-education:before {
   content: "\e903";
 }
-.icon-expiriens:before {
+.icon-experience:before {
   content: "\e904";
 }
 .icon-facebook:before {
   content: "\e905";
 }
-.icon-footerc:before {
+.icon-footer:before {
   content: "\e906";
 }
 .icon-home:before {
@@ -91,7 +91,7 @@
 .icon-map:before {
   content: "\e90b";
 }
-.icon-uncheked:before {
+.icon-unchecked:before {
   content: "\e90c";
 }
 .icon-phone:before {
@@ -112,7 +112,7 @@
 .icon-Vector:before {
   content: "\e913";
 }
-.icon-cheked:before {
+.icon-checked:before {
   content: "\e914";
 }
 .icon-youtube:before {
