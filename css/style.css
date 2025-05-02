@@ -718,16 +718,15 @@ main {
   gap: 30px;
 }
 .contact__container {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  width: 570px;
-  min-width: 50%;
+  flex: 1;
+  min-width: 570px;
 }
 .contact-form {
-  flex: 1;
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 25px;
   padding: 25px;
   background-color: var(--color-bg-secondary);
@@ -754,16 +753,11 @@ input.submit-btn {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
 }
-.contact-info__container {
-  flex: 1;
-  max-width: 370px;
-}
 .grid__contact-info {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-
 .info-card {
   display: flex;
   flex-direction: column;
