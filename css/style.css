@@ -201,7 +201,7 @@ hr {
 /* Navigation menu */
 .nav-menu {
   z-index: 1;
-  position: static;
+  position: sticky;
   top: 0;
   right: 0;
   height: 100vh;
