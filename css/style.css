@@ -52,7 +52,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
   background-color: var(--color-bg-secondary);
 }
 
@@ -202,7 +201,7 @@ hr {
 /* Navigation menu */
 .nav-menu {
   z-index: 1;
-  position: sticky;
+  position: static;
   top: 0;
   right: 0;
   height: 100vh;
