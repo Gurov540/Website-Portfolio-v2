@@ -1,55 +1,30 @@
+// Выбираем все секции и ссылки навигации
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-menu__link");
 
-let isScrolling = false;
+// Создаем наблюдатель
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const navLink = document.querySelector(`.nav-menu__link[href="#${id}"]`);
 
-function onScroll() {
-  if (isScrolling) return;
+      if (entry.isIntersecting) {
+        // Убираем активный класс у всех
+        navLinks.forEach((link) =>
+          link.classList.remove("nav-menu__link--active")
+        );
 
-  let current = "";
+        // Добавляем активный класс текущей
+        navLink.classList.add("nav-menu__link--active");
+      }
+    });
+  },
+  {
+    root: null, // viewport
+    threshold: 0.2, // 60% секции должно быть видно
+  }
+);
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    if (scrollY >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("nav-menu__link--active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("nav-menu__link--active");
-    }
-  });
-}
-
-// при скролле
-window.addEventListener("scroll", onScroll);
-
-// при клике по ссылке
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-
-    if (targetSection) {
-      isScrolling = true;
-
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-
-      navLinks.forEach((l) => l.classList.remove("nav-menu__link--active"));
-      link.classList.add("nav-menu__link--active");
-
-      // ждать завершения прокрутки
-      setTimeout(() => {
-        isScrolling = false;
-        onScroll(); // обновить активную ссылку после скролла
-      }, 600); // время прокрутки (можно подстроить)
-    }
-  });
-});
+// Подключаем наблюдатель ко всем секциям
+sections.forEach((section) => observer.observe(section));
