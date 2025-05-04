@@ -377,7 +377,7 @@ main {
 }
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   box-sizing: border-box;
 }
@@ -633,7 +633,7 @@ main {
 }
 .grid__portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 20px;
 }
 
@@ -837,4 +837,10 @@ input.submit-btn {
   width: 100%;
   background-color: var(--color-bg-secondary);
   padding: 18px 0;
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
 }
