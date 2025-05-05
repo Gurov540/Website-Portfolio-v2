@@ -22,7 +22,7 @@ const observer = new IntersectionObserver(
   },
   {
     root: null, // viewport
-    threshold: 0.2, // 60% секции должно быть видно
+    threshold: 0.5, // 60% секции должно быть видно
   }
 );
 
