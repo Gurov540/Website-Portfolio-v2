@@ -6,7 +6,6 @@
   --color-bg: #f0f0f6;
   --color-bg-secondary: #ffffff;
   --color-bg-nonactive: #f0f0f6;
-
   --color-primary: #ffb400;
   --color-primary-hover: rgba(255, 180, 0, 0.95);
 
@@ -722,7 +721,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-width: 570px;
+  width: 570px;
 }
 .contact-form {
   display: flex;
