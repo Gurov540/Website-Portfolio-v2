@@ -717,11 +717,14 @@ main {
   flex-wrap: wrap;
   gap: 30px;
 }
+.contact h2 {
+  text-wrap: nowrap;
+}
 .contact__container {
   display: flex;
   flex-direction: column;
   flex: 1;
-  width: 570px;
+  width: minmax(50%);
 }
 .contact-form {
   display: flex;
