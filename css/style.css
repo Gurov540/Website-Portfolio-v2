@@ -195,6 +195,9 @@ hr {
   background-color: var(--color-primary);
   padding: 10px 0;
 }
+.download-btn:hover {
+  color: #fff;
+}
 .download-btn__icon {
   margin-left: 19px;
 }
@@ -342,6 +345,11 @@ main {
   & .intro__button-icon {
     display: flex;
     align-items: center;
+  }
+}
+.intro__button:hover {
+  color: #fff;
+  & .intro__button-icon {
   }
 }
 .intro__image-wrapper {
