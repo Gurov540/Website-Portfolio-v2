@@ -1,25 +1,84 @@
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-menu__link");
+document.addEventListener("DOMContentLoaded", function () {
+  // Находим только навигационные ссылки
+  const navLinks = Array.from(
+    document.querySelectorAll('.nav-menu__link[href^="#"]')
+  )
+    .map((link) => {
+      const targetId = link.getAttribute("href").substring(1);
+      return {
+        link,
+        targetSection: document.getElementById(targetId),
+      };
+    })
+    .filter((item) => item.targetSection);
 
-const observer = new IntersectionObserver(
-  (entries) => {
+  if (!navLinks.length) return;
+
+  // Настройки для Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: "-30% 0px -65% 0px", // Центральная 5% экрана
+    threshold: 0,
+  };
+
+  // Обработчик пересечений
+  const handleIntersect = (entries) => {
+    let closestEntry = null;
+    let closestDistance = Infinity;
+
     entries.forEach((entry) => {
-      const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`.nav-menu__link[href="#${id}"]`);
-
       if (entry.isIntersecting) {
-        navLinks.forEach((link) =>
-          link.classList.remove("nav-menu__link--active")
+        const distance = Math.abs(
+          entry.rootBounds.top - entry.boundingClientRect.top
         );
-
-        navLink.classList.add("nav-menu__link--active");
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestEntry = entry;
+        }
       }
     });
-  },
-  {
-    root: null,
-    threshold: 0.1,
-  }
-);
 
-sections.forEach((section) => observer.observe(section));
+    if (closestEntry) {
+      const activeId = closestEntry.target.id;
+      navLinks.forEach(({ link, targetSection }) => {
+        const shouldActivate = targetSection.id === activeId;
+        link.classList.toggle("nav-menu__link--active", shouldActivate);
+
+        // Обновляем иконки
+        const iconClass = link.querySelector("i")?.className;
+        if (iconClass) {
+          link.querySelector("i").className = shouldActivate
+            ? iconClass.replace("-inactive", "-active")
+            : iconClass.replace("-active", "-inactive");
+        }
+      });
+    }
+  };
+
+  // Создаем наблюдатель
+  const observer = new IntersectionObserver(handleIntersect, observerOptions);
+
+  // Начинаем наблюдение за секциями
+  navLinks.forEach(({ targetSection }) => observer.observe(targetSection));
+
+  // Обработка начального состояния
+  const initialHash = window.location.hash.substring(1);
+  if (initialHash) {
+    const targetSection = document.getElementById(initialHash);
+    const correspondingLink = navLinks.find(
+      (item) => item.link.getAttribute("href") === `#${initialHash}`
+    );
+    correspondingLink?.link.classList.add("nav-menu__link--active");
+  }
+
+  // Плавный скролл для навигации
+  document.querySelectorAll(".nav-menu__link").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      document.querySelector(targetId).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+});
