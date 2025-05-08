@@ -349,7 +349,11 @@ main {
 }
 .intro__button:hover {
   color: #fff;
+  transition: 0.2s;
+  transform: scale(1.1);
   & .intro__button-icon {
+    transition: 0.2s;
+    transform: rotate(-45deg);
   }
 }
 .intro__image-wrapper {
