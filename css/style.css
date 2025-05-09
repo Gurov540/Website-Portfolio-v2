@@ -36,6 +36,15 @@
 
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+body.dark-theme {
+  --color-bg: #18191a;
+  --color-bg-secondary: #242526;
+  --color-bg-nonactive: #3a3b3c;
+  --color-heading: #e4e6eb;
+  --color-text: #767676;
+  --color-tooltip-bg: #767676;
+  --color-shadow: rgba(255, 255, 255, 0.05);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -83,7 +92,7 @@ body {
   width: 16px;
   height: 16px;
   background-color: var(--color-online-status);
-  border: 2px solid white;
+  border: 2px solid var(--color-text);
   border-radius: 50%;
   box-sizing: border-box;
 }
@@ -99,7 +108,7 @@ body {
 }
 
 hr {
-  border: 0.75px solid #f0f0f6;
+  border: 0.75px solid var(--color-bg-nonactive);
   width: 100%;
   margin: 25px 0 25px 0;
 }
@@ -122,7 +131,7 @@ hr {
   justify-content: center;
   align-items: center;
   &::before {
-    color: var(--color-heading);
+    color: #000;
     height: max-content;
   }
 }
@@ -137,9 +146,13 @@ hr {
   justify-content: space-between;
   line-height: var(--line-height-text);
 }
+
 .sidebar__info-label {
   background-color: var(--color-primary);
   padding: 0 5px;
+}
+.sidebar__info-value {
+  color: var(--color-text);
 }
 .sidebar__section {
   content: "";
@@ -199,7 +212,7 @@ hr {
   padding: 10px 0;
 }
 .download-btn:hover {
-  color: #fff;
+  color: var(--color-bg-secondary);
 }
 .download-btn__icon {
   margin-left: 19px;
@@ -223,10 +236,15 @@ hr {
 }
 .nav-menu__theme-toggle {
   font-size: 25px;
-  background-color: #fff;
   border: none;
   padding: 0;
   width: max-content;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: var(--color-heading);
+}
+.nav-menu__theme-toggle:hover {
+  transform: scale(1.2);
 }
 .nav-menu__list {
   width: 100%;
@@ -273,7 +291,7 @@ hr {
   width: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 10px solid #000;
+  border-top: 10px solid var(--color-tooltip-bg);
   top: -11px;
   left: 50%;
   transform: translateX(-50%) translateY(5px);
@@ -351,7 +369,7 @@ main {
   }
 }
 .intro__button:hover {
-  color: #fff;
+  color: var(--color-bg-secondary);
   transition: 0.2s;
   transform: scale(1.1);
   & .intro__button-icon {
@@ -365,6 +383,7 @@ main {
 .intro__image {
   width: 100%;
   object-fit: cover;
+  filter: invert (100%);
 }
 
 /* services section */
