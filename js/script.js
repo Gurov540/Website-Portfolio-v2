@@ -82,3 +82,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// Функция переключения темы
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+
+  // Сохраняем состояние в LocalStorage
+  const isDark = document.body.classList.contains("dark-theme");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+// Инициализация темы при загрузке
+function initTheme() {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  }
+}
+
+// Вешаем обработчик на кнопку
+document
+  .querySelector(".nav-menu__theme-toggle")
+  .addEventListener("click", toggleTheme);
+
+// Запускаем при загрузке
+window.addEventListener("DOMContentLoaded", initTheme);
