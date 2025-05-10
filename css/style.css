@@ -47,6 +47,7 @@ body.dark-theme {
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Блокирует горизонтальный скролл */
 }
 body {
   width: 100%;
