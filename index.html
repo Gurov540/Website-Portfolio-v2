@@ -697,24 +697,30 @@
         <div class="contact__container">
           <h2 class="section__title">Leave us your info</h2>
           <form action="" class="contact-form">
-            <label for="">
+            <label for="fullName">
               Your Full Name (Required)
-              <input type="text" required />
+              <input type="text" id="fullName" name="fullName" required />
             </label>
 
-            <label for="">
+            <label for="email">
               Your Email (Required)
-              <input type="email" required />
+              <input type="email" id="email" name="email" required />
             </label>
 
-            <label for="">
+            <label for="subject">
               Subject
-              <input type="text" />
+              <input type="text" id="subject" name="subject" />
             </label>
 
-            <label for="">
+            <label for="message">
               Your Message
-              <textarea name="" id="" rows="4" style="resize: none"> </textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                style="resize: none"
+              >
+              </textarea>
             </label>
 
             <input type="submit" class="submit-btn" />
