@@ -969,7 +969,7 @@ input.submit-btn {
   .nav-menu__link:focus::after {
     content: attr(data-tooltip);
     position: absolute;
-    right: 100%;
+    left: 100%;
     background: var(--color-tooltip-bg);
     color: #fff;
     padding: 4px 8px;
