@@ -8,7 +8,7 @@
   --color-bg-nonactive: #f0f0f6;
   --color-primary: #ffb400;
   --color-primary-hover: rgba(255, 180, 0, 0.95);
-  --color-online-status: #4caf50; /* Добавить вместо прямого использования #4caf50 */
+  --color-online-status: #4caf50;
   --color-tooltip-bg: #2b2b2b;
   --color-shadow: rgba(0, 0, 0, 0.05);
 
@@ -34,7 +34,7 @@
   --font-weight-medium: 500;
   --font-weight-bold: bold;
 
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 8px var(--color-shadow);
 }
 body.dark-theme {
   --color-bg: #18191a;
@@ -181,6 +181,7 @@ hr {
   height: 8px;
   padding: 1px;
   border-radius: 15px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 .progress-list__bar::-webkit-progress-bar {
@@ -467,7 +468,7 @@ main {
   color: var(--color-heading);
 }
 .pricing-card:hover {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-card);
   & .pricing-card__button {
     background-color: var(--color-primary);
     box-shadow: none;
@@ -588,6 +589,7 @@ main {
 .timeline-card {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .timeline-card__left {
@@ -619,7 +621,8 @@ main {
   text-wrap: nowrap;
 }
 .timeline-card__right {
-  max-width: 536px;
+  flex: 1;
+  min-width: 200px;
 }
 .timeline-card__subtitle {
   font-size: var(--font-size-lg);
@@ -872,6 +875,7 @@ input.submit-btn {
   text-align: center;
   width: 100%;
   background-color: var(--color-bg-secondary);
+  color: var(--color-heading);
   padding: 18px 0;
 }
 
@@ -884,18 +888,23 @@ input.submit-btn {
     min-width: 0;
   }
   .services__grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   }
   .pricing__grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   }
   .recom__grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   }
   .grid__portfolio {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   }
   .grid__blog {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .timeline__grid {
+    flex-wrap: wrap;
   }
 }
