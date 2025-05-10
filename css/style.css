@@ -236,7 +236,7 @@ hr {
   gap: 50px;
 }
 .nav-menu__theme-toggle {
-  font-size: 25px;
+  font-size: var(--font-size-xl);
   border: none;
   padding: 0;
   width: max-content;
@@ -250,7 +250,6 @@ hr {
 .nav-menu__list {
   width: 100%;
   margin: 0;
-  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -265,6 +264,7 @@ hr {
   border-radius: 50%;
   align-content: center;
   background-color: var(--color-bg-nonactive);
+  font-size: var(--font-size-base);
   &:has(.nav-menu__link--active) {
     background-color: var(--color-primary);
   }
@@ -315,6 +315,7 @@ hr {
   justify-content: center;
   align-items: center;
   height: 100%;
+
   &::before {
     color: var(--color-text);
   }
@@ -906,5 +907,74 @@ input.submit-btn {
 @media (max-width: 768px) {
   .timeline__grid {
     flex-wrap: wrap;
+  }
+}
+/* Медиа-запросы для адаптации */
+@media (max-width: 768px) {
+  .nav-menu {
+    max-width: 70px; /* Уменьшаем ширину */
+    padding: 20px 10px; /* Меньше отступов */
+    gap: 25px; /* Уменьшаем расстояние между иконками */
+  }
+
+  .nav-menu__item {
+    width: 30px; /* Уменьшаем размер кнопок */
+    height: 30px;
+  }
+
+  .nav-menu__theme-toggle {
+    font-size: 20px; /* Уменьшаем размер иконки темы */
+  }
+
+  /* Уменьшаем подсказки */
+  .nav-menu__item::before {
+    font-size: 12px;
+    padding: 4px 8px 2px;
+    top: -28px;
+  }
+
+  .nav-menu__item::after {
+    border-top-width: 8px;
+    top: -8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    max-width: 50px;
+    padding: 15px 5px;
+    gap: 15px;
+    background-color: rgba(
+      var(--color-bg-secondary),
+      0.9
+    ); /* Полупрозрачный фон */
+  }
+
+  .nav-menu__item {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-menu__theme-toggle {
+    font-size: 18px;
+  }
+
+  /* Скрываем текстовые подсказки на самых маленьких экранах */
+  .nav-menu__item::before,
+  .nav-menu__item::after {
+    display: none;
+  }
+
+  /* Добавляем всплывающий текст при фокусе */
+  .nav-menu__link:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 100%;
+    background: var(--color-tooltip-bg);
+    color: #fff;
+    padding: 4px 8px;
+    white-space: nowrap;
+    margin-left: 5px;
+    border-radius: 3px;
   }
 }
