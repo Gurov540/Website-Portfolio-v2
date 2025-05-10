@@ -940,14 +940,13 @@ input.submit-btn {
 }
 
 @media (max-width: 480px) {
+  .portfolio__tab {
+    display: none;
+  }
   .nav-menu {
     max-width: 50px;
     padding: 15px 5px;
     gap: 15px;
-    background-color: rgba(
-      var(--color-bg-secondary),
-      0.9
-    ); /* Полупрозрачный фон */
   }
 
   .nav-menu__item {
