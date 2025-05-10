@@ -959,44 +959,8 @@ input.submit-btn {
     font-size: 18px;
   }
 
-  /* Скрываем текстовые подсказки на самых маленьких экранах */
   .nav-menu__item::before,
   .nav-menu__item::after {
     display: none;
-  }
-
-  /* Добавляем всплывающий текст при фокусе */
-  .nav-menu__link:focus::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    right: 100%; /* Изменили left на right */
-    top: 50%;
-    transform: translateY(-50%); /* Центрируем по вертикали */
-    background: var(--color-tooltip-bg);
-    color: #fff;
-    padding: 4px 8px;
-    white-space: nowrap;
-    margin-right: 8px; /* Отступ от элемента */
-    border-radius: 3px;
-    z-index: 1000;
-
-    /* Анимация для плавного появления */
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-
-  .nav-menu__link:focus::before {
-    content: "";
-    position: absolute;
-    right: 100%; /* Стрелка тоже справа */
-    top: 50%;
-    transform: translate(100%, -50%); /* Сдвигаем на 100% ширины подсказки */
-    border: 5px solid transparent;
-    border-left-color: var(--color-tooltip-bg); /* Стрелка смотрит вправо */
-  }
-
-  .nav-menu__link:focus::after,
-  .nav-menu__link:focus::before {
-    opacity: 1;
   }
 }
