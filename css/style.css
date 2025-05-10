@@ -17,10 +17,10 @@
 
   --font-family-main: "Inter", sans-serif;
 
-  --font-size-base: 15px;
-  --font-size-sm: 14px;
-  --font-size-lg: 18px;
-  --font-size-xl: 32px;
+  --font-size-base: clamp(14px, 2vw, 16px); /* 14px-16px */
+  --font-size-sm: clamp(12px, 1.8vw, 14px); /* 12px-14px */
+  --font-size-lg: clamp(16px, 3vw, 20px); /* 16px-20px */
+  --font-size-xl: clamp(24px, 5vw, 36px); /* 24px-36px */
 
   --sidebar-width: 305px;
   --nav-width: 105px;
@@ -337,7 +337,7 @@ main {
   margin-bottom: 70px;
 }
 .intro__title {
-  font-size: 48px;
+  font-size: clamp(32px, 8vw, 48px); /* 32px-48px */
   font-weight: var(--font-weight-bold);
   color: var(--color-heading);
   & .intro__role {
@@ -345,7 +345,7 @@ main {
   }
 }
 .intro__description {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
   margin: 18px 0 25px 0;
@@ -397,7 +397,7 @@ main {
 .section__title {
   text-wrap: wrap;
   text-align: center;
-  font-size: 36px;
+  font-size: clamp(24px, 4vw, 36px); /* 24px-36px */
   font-weight: 700;
   color: var(--color-heading);
   margin-bottom: 16px;
@@ -430,7 +430,7 @@ main {
   display: inline-block;
 }
 .service-card__title {
-  font-size: 20px;
+  font-size: clamp(16px, 2.5vw, 20px); /* 16px-20px */
   font-weight: 600;
   color: var(--color-heading);
   margin-bottom: 8px;
@@ -641,8 +641,6 @@ main {
 .portfolio__tab {
   justify-content: center;
   gap: 37px;
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-medium);
   color: var(--color-heading);
   display: flex;
   margin-bottom: 50px;
@@ -652,6 +650,8 @@ main {
 }
 .portfolio__tab button {
   position: relative;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
 }
 .portfolio__tab button::after {
   content: "";
