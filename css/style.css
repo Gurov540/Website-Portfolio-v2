@@ -889,18 +889,10 @@ input.submit-btn {
     margin: 0 15px;
     min-width: 0;
   }
-  .services__grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  }
-  .pricing__grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  }
-  .recom__grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  }
-  .grid__portfolio {
-    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  }
+  .services__grid,
+  .pricing__grid,
+  .recom__grid,
+  .grid__portfolio,
   .grid__blog {
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   }
