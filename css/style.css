@@ -902,24 +902,23 @@ input.submit-btn {
     flex-wrap: wrap;
   }
 }
-/* Медиа-запросы для адаптации */
+
 @media (max-width: 768px) {
   .nav-menu {
-    max-width: 70px; /* Уменьшаем ширину */
-    padding: 20px 10px; /* Меньше отступов */
-    gap: 25px; /* Уменьшаем расстояние между иконками */
+    max-width: 70px;
+    padding: 20px 10px;
+    gap: 25px;
   }
 
   .nav-menu__item {
-    width: 30px; /* Уменьшаем размер кнопок */
+    width: 30px;
     height: 30px;
   }
 
   .nav-menu__theme-toggle {
-    font-size: 20px; /* Уменьшаем размер иконки темы */
+    font-size: 20px;
   }
 
-  /* Уменьшаем подсказки */
   .nav-menu__item::before {
     font-size: 12px;
     padding: 4px 8px 2px;
