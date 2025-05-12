@@ -906,14 +906,6 @@ input.submit-btn {
   .nav-menu__theme-toggle {
     font-size: 20px;
   }
-
-  .nav-menu__item::before {
-    /* font-size: 12px;
-    padding: 4px 8px 2px;
-    top: -0;
-    left: -100%; */
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
