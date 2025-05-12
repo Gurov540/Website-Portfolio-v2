@@ -763,14 +763,15 @@ main {
   & label {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text);
+    color: var(--color-heading);
     display: flex;
     flex-direction: column;
     gap: 8px;
     & input,
     textarea {
       width: 100%;
-      font-size: 40px;
+      font-size: 25px;
+      padding: 8px 0 8px 18px;
       background-color: var(--color-bg-nonactive);
     }
   }
@@ -780,7 +781,7 @@ input.submit-btn {
   padding: 9px 25px;
   background-color: var(--color-primary);
   color: var(--color-heading);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
 }
 .grid__contact-info {
