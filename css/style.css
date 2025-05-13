@@ -735,6 +735,23 @@ main {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
   color: var(--color-primary);
+  display: inline-block; /* Необходимо для работы transform */
+  transition: transform 0.3s ease; /* Добавляем плавность */
+}
+.blog-link:hover {
+  transform: translateX(20%);
+}
+/* Добавляем и анимируем символ '>' */
+.blog-link::after {
+  content: ">";
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  transform-origin: center center; /* Точка вращения */
+}
+
+.blog-link:hover::after {
+  transform: rotate(90deg);
 }
 
 /* contact section */
@@ -916,6 +933,7 @@ input.submit-btn {
     max-width: 50px;
     padding: 15px 5px;
     gap: 15px;
+    background-color: #2b2b2b;
   }
 
   .nav-menu__item {
