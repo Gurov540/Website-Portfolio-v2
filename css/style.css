@@ -136,6 +136,9 @@ hr {
     height: max-content;
   }
 }
+.sidebar__social-item:hover {
+  transform: scale(1.1);
+}
 .sidebar__info-list {
   width: 100%;
   display: flex;
