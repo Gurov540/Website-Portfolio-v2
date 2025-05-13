@@ -699,6 +699,9 @@ main {
   cursor: pointer;
   opacity: 0;
 }
+.portfolio-item::after:hover {
+  transform: rotate(180deg);
+}
 .portfolio-item:hover::before,
 .portfolio-item:hover::after {
   opacity: 1;
