@@ -692,12 +692,9 @@ main {
   top: 50%;
   left: 50%;
   z-index: 2;
-  transform: translate(-50%, -50%);
-  font-size: 80px;
-  color: var(--color-heading);
-  font-weight: bold;
-  cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Добавляем анимацию для вращения */
+  transform: translate(-50%, -50%); /* Центрируем иконку */
+  transform-origin: center center; /* Явно задаем точку вращения */
+  transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
 }
 
