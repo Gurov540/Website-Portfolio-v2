@@ -330,7 +330,7 @@ main {
   margin-bottom: 70px;
 }
 .intro__title {
-  font-size: clamp(32px, 8vw, 48px); /* 32px-48px */
+  font-size: clamp(32px, 8vw, 48px);
   font-weight: var(--font-weight-bold);
   color: var(--color-heading);
   & .intro__role {
@@ -697,14 +697,16 @@ main {
   color: var(--color-heading);
   font-weight: bold;
   cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Добавляем анимацию для вращения */
   opacity: 0;
 }
-.portfolio-item::after:hover {
-  transform: rotate(180deg);
-}
+
 .portfolio-item:hover::before,
 .portfolio-item:hover::after {
   opacity: 1;
+}
+.portfolio-item:hover::after {
+  transform: translate(-50%, -50%) rotate(360deg); /* Комбинируем трансформации */
 }
 
 /* blog section*/
