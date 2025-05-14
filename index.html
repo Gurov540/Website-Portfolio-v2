@@ -832,7 +832,13 @@
     </main>
 
     <nav class="navigation" aria-label="Main navigation">
-      <div class="nav-menu">
+      <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <div class="nav-menu-wrapper">
+              <div class="nav-menu">
         <button class="nav-menu__theme-toggle" aria-label="Toggle theme">
           <i class="icon-darckthem" aria-hidden="true"></i>
         </button>
@@ -899,6 +905,8 @@
           </li>
         </ul>
       </div>
+      </div>
+
     </nav>
     <script src="./js/script.js"></script>
     <div class="scroll-top" title="Наверх">↑</div>
