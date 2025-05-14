@@ -892,6 +892,52 @@ input.submit-btn {
   padding: 18px 0;
 }
 
+/* Кнопка "Вверх" */
+.scroll-top {
+  position: fixed;
+  right: var(--nav-width); /* Отступ справа больше ширины навигации */
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: var(--shadow-card);
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  background: var(--color-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .scroll-top {
+    right: 90px; /* Подстройте под мобильную версию навигации */
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-top {
+    right: 70px; /* Для самых маленьких экранов */
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+  }
+}
+/* Media */
 @media (max-width: 960px) {
   .sidebar {
     display: none;
