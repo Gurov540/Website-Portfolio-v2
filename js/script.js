@@ -117,3 +117,37 @@ scrollTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Добавляем в script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".nav-burger");
+  const navMenu = document.querySelector(".nav-menu-wrapper");
+
+  // Переключение меню
+  burger.addEventListener("click", function () {
+    this.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    this.setAttribute("aria-expanded", this.classList.contains("active"));
+  });
+
+  // Закрытие меню при клике вне области
+  document.addEventListener("click", function (e) {
+    if (
+      !e.target.closest(".nav-menu-wrapper") &&
+      !e.target.closest(".nav-burger")
+    ) {
+      burger.classList.remove("active");
+      navMenu.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Закрытие меню после выбора пункта
+  document.querySelectorAll(".nav-menu__link").forEach((link) => {
+    link.addEventListener("click", () => {
+      burger.classList.remove("active");
+      navMenu.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+    });
+  });
+});
