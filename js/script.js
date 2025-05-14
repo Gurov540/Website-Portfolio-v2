@@ -94,3 +94,26 @@ document
   .addEventListener("click", toggleTheme);
 
 window.addEventListener("DOMContentLoaded", initTheme);
+
+// Кнопка "Вверх"
+const scrollTopBtn = document.createElement("div");
+scrollTopBtn.className = "scroll-top";
+scrollTopBtn.innerHTML = "↑";
+document.body.appendChild(scrollTopBtn);
+
+// Показать/скрыть кнопку
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+// Плавный скролл вверх
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
