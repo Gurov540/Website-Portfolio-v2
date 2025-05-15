@@ -118,36 +118,36 @@ scrollTopBtn.addEventListener("click", () => {
   });
 });
 
-// Добавляем в script.js
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.querySelector(".nav-burger");
-  const navMenu = document.querySelector(".nav-menu-wrapper");
+// Burger
+function handleResponsiveShowClass() {
+  // Ваш селектор элементов (уточните какой именно нужен)
+  const targetElements = document.querySelectorAll(".your-specific-selector");
 
-  // Переключение меню
-  burger.addEventListener("click", function () {
-    this.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    this.setAttribute("aria-expanded", this.classList.contains("active"));
-  });
+  if (!targetElements.length) return;
 
-  // Закрытие меню при клике вне области
-  document.addEventListener("click", function (e) {
-    if (
-      !e.target.closest(".nav-menu-wrapper") &&
-      !e.target.closest(".nav-burger")
-    ) {
-      burger.classList.remove("active");
-      navMenu.classList.remove("active");
-      burger.setAttribute("aria-expanded", "false");
+  window.addEventListener("DOMContentLoaded", checkScreenSize);
+  window.addEventListener("resize", throttle(checkScreenSize, 100));
+
+  function checkScreenSize() {
+    if (window.innerWidth < 768) {
+      targetElements.forEach((el) => el.classList.remove("show"));
+    } else {
+      // Раскомментировать если нужно восстановление класса
+      // targetElements.forEach(el => el.classList.add('show'));
     }
-  });
+  }
+}
 
-  // Закрытие меню после выбора пункта
-  document.querySelectorAll(".nav-menu__link").forEach((link) => {
-    link.addEventListener("click", () => {
-      burger.classList.remove("active");
-      navMenu.classList.remove("active");
-      burger.setAttribute("aria-expanded", "false");
-    });
-  });
-});
+// Вспомогательная функция для оптимизации
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function () {
+    if (time + wait - Date.now() < 0) {
+      fn();
+      time = Date.now();
+    }
+  };
+}
+
+// Инициализация
+handleResponsiveShowClass();
