@@ -1003,69 +1003,30 @@ input.submit-btn {
 }
 
 /* burger menu */
-/* CSS для мобильного меню */
+.nav-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background: var(--color-heading);
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
-  .nav-burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 22px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .burger-line {
-    width: 100%;
-    height: 3px;
-    background: var(--color-heading);
-    transition: all 0.3s ease;
-  }
-
-  .nav-menu-wrapper {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background: var(--color-bg-secondary);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
-    z-index: 999;
-  }
-
   .nav-menu {
-    flex-direction: column;
-    padding: 80px 20px;
-    gap: 30px;
-    max-width: 100%;
-  }
-
-  .nav-menu__list {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  /* Анимация бургера при открытии */
-  .nav-burger.active .burger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .nav-burger.active .burger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-burger.active .burger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Показываем меню при активном классе */
-  .nav-menu-wrapper.active {
-    right: 0;
+    display: none;
   }
 }
