@@ -1004,6 +1004,9 @@ input.submit-btn {
 
 /* burger menu */
 .nav-burger {
+  display: none;
+}
+.nav-burger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
