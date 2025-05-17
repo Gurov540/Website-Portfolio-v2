@@ -95,13 +95,11 @@ document
 
 window.addEventListener("DOMContentLoaded", initTheme);
 
-// Кнопка "Вверх"
 const scrollTopBtn = document.createElement("div");
 scrollTopBtn.className = "scroll-top";
 scrollTopBtn.innerHTML = "↑";
 document.body.appendChild(scrollTopBtn);
 
-// Показать/скрыть кнопку
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     scrollTopBtn.classList.add("show");
@@ -110,7 +108,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Плавный скролл вверх
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -118,9 +115,7 @@ scrollTopBtn.addEventListener("click", () => {
   });
 });
 
-// Burger
 function handleResponsiveShowClass() {
-  // Ваш селектор элементов (уточните какой именно нужен)
   const targetElements = document.querySelectorAll(".your-specific-selector");
 
   if (!targetElements.length) return;
@@ -132,13 +127,10 @@ function handleResponsiveShowClass() {
     if (window.innerWidth < 768) {
       targetElements.forEach((el) => el.classList.remove("show"));
     } else {
-      // Раскомментировать если нужно восстановление класса
-      // targetElements.forEach(el => el.classList.add('show'));
     }
   }
 }
 
-// Вспомогательная функция для оптимизации
 function throttle(fn, wait) {
   let time = Date.now();
   return function () {
@@ -149,5 +141,4 @@ function throttle(fn, wait) {
   };
 }
 
-// Инициализация
 handleResponsiveShowClass();
